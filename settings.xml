@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>nextwork-rifaie-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>nextwork-rifaie-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>nextwork-rifaie-devops-cicd</id>
+        <url>https://nextwork-545179001151.d.codeartifact.us-east-1.amazonaws.com/maven/rifaie-devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>nextwork-rifaie-devops-cicd</id>
+    <name>nextwork-rifaie-devops-cicd</name>
+    <url>https://nextwork-545179001151.d.codeartifact.us-east-1.amazonaws.com/maven/rifaie-devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
